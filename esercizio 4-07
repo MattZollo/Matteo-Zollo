@@ -1,0 +1,26 @@
+from ast import AnnAssign
+
+
+class primaclasse(): 
+
+  Anni = input("Quanti anni hai?")
+
+  if Anni != 0 :
+    
+   print(Anni)
+
+  else:
+
+   print(False)
+
+lista  = []
+Anni1  =  input ( "Quanti anni hai " )
+Anni2  =  input ( "Quanti anni hai?" )
+Anni3  =  input ( "Quanti anni hai?" )
+Anni4  =  input ( "Quanti anni hai? " )
+lista .append ( Anni1 )
+lista .append ( Anni2 )
+lista .append ( Anni3 )
+lista .append ( Anni4 )
+
+print ( lista )
