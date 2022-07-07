@@ -1,26 +1,34 @@
 from ast import AnnAssign
+from pickle import FALSE
 
 
 class primaclasse(): 
 
   Anni = input("Quanti anni hai?")
 
-  if Anni != 0 :
+  if Anni != FALSE :
     
    print(Anni)
 
   else:
 
-   print(False)
+   print("errore")
 
-lista  = []
-Anni1  =  input ( "Quanti anni hai " )
-Anni2  =  input ( "Quanti anni hai?" )
-Anni3  =  input ( "Quanti anni hai?" )
-Anni4  =  input ( "Quanti anni hai? " )
-lista .append ( Anni1 )
-lista .append ( Anni2 )
-lista .append ( Anni3 )
-lista .append ( Anni4 )
+  
+  Lista = [Anni]
 
-print ( lista )
+  Anni1 = input("Quanti anni hai?")
+  Anni2 = input("Quanti anni hai?")
+  Anni3 = input("Quanti anni hai?")
+  Anni4 = input("Quanti anni hai?")
+  Lista.append (Anni1)
+  Lista.append (Anni2)
+  Lista.append (Anni3)
+  Lista.append (Anni4)
+
+  if Anni1 != FALSE and Anni2 != FALSE and Anni3 != FALSE and Anni4 != FALSE :
+
+   print("Errore")
+
+  else:
+   print(Lista) 
