@@ -1,0 +1,27 @@
+class CreazioneLista():
+   Lista =[]
+   nome = "x"
+   Cognome = "y"
+   eta = 10
+   lavoro ="z"
+
+utente = CreazioneLista()
+
+utente.nome = input("Nome")
+if(type(utente.nome)== str) :
+ utente.Lista.append(utente.nome)
+
+utente.Cognome =input ("cognome")
+if(type(utente.Cognome)== str) :
+ utente.Lista.append(utente.Cognome)
+
+utente.eta = input("età")
+if(type(int(utente.eta))== int) :
+ utente.Lista.append(utente.eta)
+
+utente.lavoro = input ("lavoro")
+if(type(utente.lavoro)== str) :
+ utente.Lista.append(utente.lavoro)
+
+
+print(utente.Lista)
