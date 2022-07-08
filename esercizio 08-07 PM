@@ -1,0 +1,65 @@
+
+class studente:
+  def __init__(self,nome, lname,):
+    self.fristname = nome
+    self.lastname = lname
+  def printnome(self):
+   print(self.fristname,self.lastname)   
+
+class Insegnante(studente):
+  def __init__ (self,nome, lname, materia) :
+    studente.__init__(self,nome, lname)  
+    self.insegamento = materia
+  def printnome(self):
+   print(self.fristname,self.lastname,self.insegamento)
+
+class Preside(Insegnante):
+  def __init__ (self,nome, lname, materia, scuola) :
+     Insegnante.__init__(self,nome,lname,materia)
+     self.istituto = scuola
+  def printnome(self):
+   print(self.fristname,self.lastname,self.insegamento,self.istituto)
+
+
+ListaStudenti=[]
+ListaInseganti= []
+ListaPreside=[]
+
+i=1
+while i<3:
+
+ domanda = input("cosa sei?")
+
+ if(domanda == "studente"):
+    PNome = input("Nome")
+    SNome = input("Cognome")
+    s = studente(PNome,SNome)
+    s.printnome()
+    ListaStudenti.append(PNome)
+    
+    print (ListaStudenti)
+
+ elif( domanda == "Insegnante"):
+    PNome = input("Nome")
+    SNome = input("Cognome")
+    TMateria = input("Materia")    
+    i = Insegnante (PNome,SNome,TMateria)
+    i.printnome()
+    ListaInseganti.append(PNome)
+    print(ListaInseganti)
+
+ elif( domanda== "Preside"):
+    PNome = input("Nome")
+    SNome = input("Cognome")
+    TMateria =input("Materia") 
+    TIstituto =input ("Scuola")   
+    p = Preside (PNome,SNome,TMateria,TIstituto)
+    p.printnome()
+    ListaPreside.append(PNome)
+    print(ListaPreside)
+
+
+ else: print( "Nulla")
+
+ i = i + 1
+ print(i)
