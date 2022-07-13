@@ -1,1 +1,29 @@
+class Squadra ():
 
+    rosa =[]
+    def __init__(self):
+      pass
+class Giocatore(Squadra):
+    def __init__(self,nome):
+        self.nome=nome
+
+x=0
+for x in range (0,5):        
+ calciatore = input("nome")
+ Squadra.rosa.append(calciatore)
+a=0
+while a<3:
+ i= input("la squadra ha vinto?")
+ if i == "si":
+    print("tutti confermati")
+ else:
+    Squadra.rosa.clear()
+    z=0
+    for z in range (0,5):        
+     calciatore = input("nome")
+     Squadra.rosa.append(calciatore)
+
+ print(a)
+ a +=1
+
+print(Squadra.rosa)
