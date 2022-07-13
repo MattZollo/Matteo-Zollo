@@ -1,0 +1,48 @@
+class Team ():
+    listadif=[]
+    listaCC=[]
+    pagaGoalD= 50
+    pagaGoalC= 40
+    
+   
+    #sum(listaCC)
+    
+    def __init__(self):
+         pass
+    def paga_dif()  :
+        b=int(sum(Team.listadif))* int(Team.pagaGoalD)
+        print(b)
+        Team.listadif.clear()
+        print(Team.listaCC)
+
+    def paga_cc()  :
+        c=int(sum(Team.listaCC))* int(Team.pagaGoalC)
+        print(c) 
+        Team.listaCC.clear() 
+        print(Team.listaCC)  
+        
+
+class Difensori(Team): 
+    def __init__ (self,goal) :
+       self.goal=goal
+       
+  
+class Centrocampisti(Team):
+    def __init__ (self,goal) :
+        self.goal=goal
+
+i=0
+while i<3:
+ domanda= input("1-difensore___2-centrocampista")  
+ if domanda=="1" :
+    Ngoal=int(input("quanti goal") )
+    Team.listadif.append(Ngoal) 
+    print(Team.listadif)
+    
+ elif domanda =="2" :
+    Ngoal=int(input ("quanti goal") )
+    Team.listaCC.append(Ngoal)     
+ print(i)
+ i +=1    
+Team.paga_dif()
+Team.paga_cc()   
