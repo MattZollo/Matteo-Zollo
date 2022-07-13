@@ -1,0 +1,32 @@
+class Comune():
+  def __init__ (self,nome):
+    self.nome=nome
+
+
+class Asl(Comune):
+  def __init__ (self,nome) :
+    Comune.__init__(self,nome)
+
+
+class Proloco(Comune):
+  def __init__(self,nome):
+    Comune.__init__(self,nome)
+
+Budget=[]
+
+
+x=0
+for i in range (2):
+   importo= int(input("importo"))
+   Budget.append(float(importo))
+   for j in Budget:
+    x += j
+
+s=float(sum(Budget))    
+print(s)
+print(Budget)
+Basl= float(s)* 0.3
+Bpro= float(s)* 0.3
+Bcom= float(s)* 0.4
+
+print(Basl,Bpro,Bcom)
