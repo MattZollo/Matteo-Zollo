@@ -1,0 +1,136 @@
+class Amazon():
+    listaFurgone1=[3,6,7]
+    listaFurgone2=[8,9,1]
+    listaFurgone3=[21,4,4]
+    paga = 4
+   
+    
+    
+    def __init__(self):
+         pass
+    
+    def paga_primofurgone()  :
+        b=int(sum(Amazon.listaFurgone1))* int(Amazon.paga)
+        print(b)
+        Amazon.listaFurgone1.clear()
+        print(Amazon.listaFurgone1)
+
+        
+
+    def paga_secondofurgone()  :
+        c=int(sum(Amazon.listaFurgone2))* int(Amazon.paga)
+        print(c)
+        Amazon.listaFurgone2.clear()
+        print(Amazon.listaFurgone2)
+        
+    
+    def paga_terzofurgone()  :
+        d=int(sum(Amazon.listaFurgone3))* int(Amazon.paga)
+        print(d) 
+        Amazon.listaFurgone3.clear()
+        print(Amazon.listaFurgone3)   
+        
+
+class Furgoni(Amazon): 
+    def __init__ (self,vendite) :
+       self.vendite=vendite
+       
+  
+d=input("vuoi pagare i furgoni?")
+if d== "si":
+    Amazon.paga_primofurgone()
+    Amazon.paga_secondofurgone()
+    Amazon.paga_terzofurgone()
+
+
+
+while True:
+ domanda= input("Quale fugone ha fatto la vendita__1__2__3")  
+ if domanda=="1" :
+    Nvendite=int(input("quanti oggetti?") )
+    Amazon.listaFurgone1.append(Nvendite) 
+    print(Amazon.listaFurgone1)
+    
+ elif domanda =="2" :
+    Nvendite=int(input("quanti oggetti?") )
+    Amazon.listaFurgone2.append(Nvendite) 
+    print(Amazon.listaFurgone2)
+
+ elif domanda =="3" :
+    Nvendite=int(input("quanti oggetti?") )
+    Amazon.listaFurgone3.append(Nvendite) 
+    print(Amazon.listaFurgone3)    
+
+ scelta = input( "se le vendite sono terminare digita END")
+ if scelta == ("END"):
+  break 
+
+input("ecco i soldi")
+Amazon.paga_primofurgone()
+Amazon.paga_secondofurgone()
+Amazon.paga_terzofurgone()
+
+
+
+# ESERCIZIO 2
+class Giocatore():
+    rosa=[]
+    def __init__(self,nome):
+        self.nome=nome
+
+x=0
+for x in range (0,4):  
+     
+ calciatore = input("inserisci il nome dei calciatori")
+ Giocatore.rosa.append(calciatore)
+
+answ = 0
+while True:
+ i= input("vuoi confermare i giocatori?")
+ if i == "si":
+    print("tutti confermati")
+ elif i== "no":
+        domanda =input("qualcosa non va,sei sicuro di voler cambiare?")
+        if domanda == "si":
+         answ = int(input("Quanti ne vuoi cambiare?"))
+         w=0
+         for w in range (answ):
+         
+           print(Giocatore.rosa)
+           domanda = int( input("qual calciatore  vuoi sostituire  0- 1 -2 -3  "))
+           Giocatore.rosa[domanda]= (input("nuovo calciatore"))
+           print(Giocatore.rosa)
+
+
+ scelta = input( "se vuoi terminare digita END")
+ if scelta == ("END"):
+  break     
+         
+    
+    
+
+ 
+
+ print(Giocatore.rosa)
+
+
+
+#ESERCIZIO 1
+
+Lista = []
+
+
+while True:
+    
+    primonome = input("digita il nome")
+    Lista.append(primonome)
+    primocognome = input("digita il cognome")
+    Lista.append(primocognome)
+    Lista.append("_____")
+
+
+    scelta = input( "se vuoi terminare digita END")
+    if scelta == ("END"):
+        break
+
+print(Lista)   
