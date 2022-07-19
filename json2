@@ -1,0 +1,30 @@
+import json
+import pickle
+
+
+lista=[]
+x= 0
+while x <3 :
+
+ aggiorna=input("inserici valore")
+ lista.append(aggiorna)
+  
+   
+ print(x)
+ x = x+1
+
+
+print(" tipo di conversione ")
+scelta_conv= input("1.Pickle - 2.Json")
+P= pickle
+J= json
+conversore=""
+if scelta_conv=="1":
+    conversore=P
+elif scelta_conv=="2":
+    conversore=J
+
+
+dum=conversore.dumps(lista)
+lod=conversore.loads(dum)
+print(lod)
