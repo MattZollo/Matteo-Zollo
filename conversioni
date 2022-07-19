@@ -1,0 +1,45 @@
+
+from calendar import c
+import json
+import pickle
+
+b="Siamo la classe migliore di"
+a={"a":11,"b":24,"c":11}
+
+scelta = int(input("1-jshon  2-Pikle"))
+if scelta == 1:
+
+
+  print(a)
+       
+  y=json.dumps(a)
+  y1 = json.loads(y)
+  a["c"]=input("nuovo")
+  print(a)
+
+  print(b)
+
+  k=json.dumps(b)
+  k1 = json.loads(k)
+  k1=k1 + " " + input("elemento da aggiungere")
+
+  print(k1)       
+
+
+elif scelta == 2:
+#print(a)
+       
+  y= pickle.dumps(a)
+  y1 = pickle.loads(y)
+
+  a["c"]=input("nuovo")
+  print(a)
+
+  print(b)
+
+  k=pickle.dumps(b)
+  k1 = pickle.loads(k)
+  x =input("elemento da aggiungere")
+  k1=k1 +  " " + x
+
+  print(k1)
